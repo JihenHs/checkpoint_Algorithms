@@ -1,0 +1,39 @@
+Algorithm Sentece_determine
+var ch= string;
+var countNbcar = integer :=0;
+var countNbvoy= integer:=0;
+var CountNbwords = integer:=0;
+Begin
+REPEAT
+Read( age )
+UNTIL ( ch[longeur(ch)] == "." )
+
+//transformer la chaine en miniscule
+Min(ch);
+FOR i FROM 1 TO Longeur(ch)  DO
+countNbcar = countNbcar+1;
+SWITCH (ch[i]) Do
+CASE "a" : countNbvoy:= countNbvoy+1;
+BREAK;
+CASE "o" : countNbvoy:= countNbvoy+1;
+BREAK;
+CASE "u" : countNbvoy:= countNbvoy+1;
+BREAK;
+CASE "i" : countNbvoy:= countNbvoy+1;
+BREAK;
+CASE "e" : countNbvoy:= countNbvoy+1;
+BREAK;
+CASE "y" : countNbvoy:= countNbvoy+1;
+BREAK;
+END_SWITCH
+IF(ch[i] == " " OR ch[i] == ".")THEN
+CountNbwords := CountNbwords+1;
+END_FOR
+Write(countNbcar);
+Write(countNbvoy);
+Write(CountNbwords);
+END
+
+
+   
+
