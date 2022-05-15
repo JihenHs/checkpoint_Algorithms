@@ -1,0 +1,36 @@
+Algorithm Sentence_determine
+var
+    ch= string;
+    countNbcar = integer :=0;
+    countNbvoy= integer:=0;
+    CountNbwords = integer:=0;
+Begin
+    
+read(ch)
+
+var i : integer :=0;
+WHILE (ch[i] != ".") DO
+    countNbcar = countNbcar+1;
+    SWITCH (ch[i]) Do
+    case "a" : countNbvoy:= countNbvoy+1;
+    BREAK;
+    case "o" : countNbvoy:= countNbvoy+1;
+    BREAK;
+    case "u" : countNbvoy:= countNbvoy+1;
+    BREAK;
+    case "i" : countNbvoy:= countNbvoy+1;
+    BREAK;
+    case "e" : countNbvoy:= countNbvoy+1;
+    BREAK;
+    case "y" : countNbvoy:= countNbvoy+1;
+    BREAK;
+    END_SWITCH
+    IF(ch[i] == " " OR ch[i] == ".")THEN
+    CountNbwords := CountNbwords+1;
+    END_IF
+    i:= i+1;
+END_WHILE
+Write(countNbcar);
+Write(countNbvoy);
+Write(CountNbwords);
+END
